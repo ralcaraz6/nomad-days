@@ -1,0 +1,19 @@
+[project]
+name = "nomad-days"
+version = "0.1.0"
+description = "Count days per country and warn before a visa or tax-residency limit."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Rogelio Alcaraz" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+nomad-days = "nomad_days.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

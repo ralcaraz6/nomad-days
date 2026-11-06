@@ -1,0 +1,10 @@
+# My real travel history and rules stay on my machine
+/trips.csv
+/nomad.toml
+.env
+
+__pycache__/
+*.egg-info/
+.venv/
+dist/
+build/
