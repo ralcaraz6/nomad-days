@@ -1,0 +1,25 @@
+# Demo: a made-up non-EU traveller whose tax home is Australia.
+# "Today" is fixed so the demo always reads the same.
+[settings]
+demo_today = "2026-11-06"
+
+[[rule]]
+name = "Schengen 90/180"
+kind = "rolling"
+countries = ["SCHENGEN"]
+max_days = 90
+window_days = 180
+
+[[rule]]
+name = "Indonesia stay (60 days)"
+kind = "per_stay"
+countries = ["ID"]
+max_days = 60
+
+[[rule]]
+name = "Australia tax year (183)"
+kind = "yearly"
+countries = ["AU"]
+max_days = 183
+year_start = "07-01"
+warn_days = 20

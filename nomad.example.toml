@@ -1,0 +1,26 @@
+# Copy to nomad.toml (git-ignored) and adapt. Visa and tax rules change:
+# check the current official rules for your passport before relying on any number here.
+
+# Tax residency in Spain: 183 days in a calendar year.
+[[rule]]
+name = "Spain tax year (183)"
+kind = "yearly"
+countries = ["ES"]
+max_days = 183
+warn_days = 20
+
+# Indonesia visa on arrival: 30 days, extendable once to 60 in total.
+[[rule]]
+name = "Indonesia stay (60 days)"
+kind = "per_stay"
+countries = ["ID"]
+max_days = 60
+warn_days = 7
+
+# Only if you do NOT hold an EU/EEA/Swiss passport:
+# [[rule]]
+# name = "Schengen 90/180"
+# kind = "rolling"
+# countries = ["SCHENGEN"]
+# max_days = 90
+# window_days = 180
